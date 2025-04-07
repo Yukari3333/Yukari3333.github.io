@@ -1,0 +1,170 @@
+body {
+    margin: 0;
+    font-family: 'Prompt', sans-serif;
+    background-color: #000000;
+    color: #ffffff;
+    line-height: 1.6; /* เพิ่มระยะห่างระหว่างบรรทัด */
+}
+
+.fullpage {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(135deg, #ff00ff, #00ffff);
+    padding: 20px;
+    animation: gradientShift 10s ease infinite; /* เพิ่ม animation ไล่สี */
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.profile-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 30px;
+    box-shadow: 0 8px 30px rgba(255, 0, 255, 0.8); /* เพิ่มขนาดเงา */
+    border: 5px solid #ffff00;
+    transition: transform 0.3s ease; /* เพิ่ม transition การเคลื่อนไหว */
+}
+
+.profile-img:hover {
+    transform: scale(1.1); /* ขยายรูปเมื่อ hover */
+}
+
+.btn {
+    background-color: #ffff00;
+    color: #000000;
+    padding: 18px 35px; /* เพิ่มขนาดปุ่ม */
+    border-radius: 35px; /* เพิ่มความโค้ง */
+    text-decoration: none;
+    font-size: 20px; /* เพิ่มขนาดตัวอักษร */
+    margin-top: 30px;
+    display: inline-block;
+    transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease; /* เพิ่ม transition การเคลื่อนไหว */
+    box-shadow: 0 5px 20px rgba(255, 255, 0, 0.7); /* เพิ่มขนาดเงา */
+}
+
+.btn:hover {
+    background-color: #ff0000;
+    color: #ffffff;
+    box-shadow: 0 8px 25px rgba(255, 0, 0, 0.9); /* เพิ่มขนาดเงา */
+    transform: translateY(-5px); /* ยกปุ่มขึ้นเมื่อ hover */
+}
+
+header {
+    background-color: #0000ff;
+    color: #ffffff;
+    padding: 25px 35px; /* เพิ่มขนาด header */
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 3px 12px rgba(0, 0, 255, 0.6); /* เพิ่มขนาดเงา */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px; /* เพิ่มระยะห่าง */
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s ease, text-shadow 0.2s ease;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6); /* เพิ่มขนาดเงาตัวอักษร */
+}
+
+nav a:hover {
+    color: #ffff00;
+    text-shadow: 1px 1px 4px #ffff00; /* เพิ่มขนาดเงาตัวอักษร */
+}
+
+.section {
+    padding: 100px 60px; /* เพิ่มขนาด section */
+    max-width: 1400px; /* เพิ่มขนาด section */
+    margin: auto;
+}
+
+.center {
+    text-align: center;
+}
+
+footer {
+    background-color: #222222;
+    color: #ffffff;
+    padding: 100px; /* เพิ่มขนาด footer */
+    box-shadow: 0 -3px 12px rgba(0, 0, 0, 0.6); /* เพิ่มขนาดเงา */
+}
+
+.about-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 70px; /* เพิ่มระยะห่าง */
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.profile-pic img {
+    width: 220px; /* เพิ่มขนาดรูป */
+    height: 220px; /* เพิ่มขนาดรูป */
+    object-fit: cover;
+    border-radius: 100%;
+    box-shadow: 0 8px 35px rgba(0, 255, 255, 0.9); /* เพิ่มขนาดเงา */
+    border: 6px solid #ff0000; /* เพิ่มขนาดขอบ */
+    transition: transform 0.3s ease; /* เพิ่ม transition การเคลื่อนไหว */
+}
+
+.profile-pic img:hover {
+    transform: rotate(5deg); /* หมุนรูปเล็กน้อยเมื่อ hover */
+}
+
+.about-text {
+    flex: 1;
+    min-width: 350px; /* เพิ่มขนาด text */
+}
+
+.skill-section {
+    display: flex;
+    align-items: flex-start;
+    gap: 60px; /* เพิ่มระยะห่าง */
+    justify-content: center;
+}
+
+.skill-text {
+    flex: 1;
+    min-width: 350px; /* เพิ่มขนาด text */
+}
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* ปรับขนาดตามหน้าจอ */
+    gap: 20px; /* ระยะห่างระหว่างทักษะ */
+    justify-items: center; /* จัดกึ่งกลางแนวนอน */
+}
+
+.skill-item {
+    text-align: center; /* จัดกึ่งกลางข้อความ */
+}
+
+.skill-item img {
+    width: 100px; /* ขนาดรูปภาพ */
+    height: 100px; /* ขนาดรูปภาพ */
+    object-fit: contain;
+}
